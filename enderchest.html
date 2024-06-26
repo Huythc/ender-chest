@@ -1,26 +1,835 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
-    <title>FOLLOW FOR MORE</title>
-    <link rel="stylesheet" href="block.css">
-    <link rel="stylesheet" href="lid.css">
-    <link rel="stylesheet" href="enderchest.css">
-    <link rel="stylesheet" href="dust.css">
-    <link rel="stylesheet" href="body.css">
-    <link rel="stylesheet" href="minidust.css">
-    <link rel="stylesheet" href="pixel.css">
-    <link rel="stylesheet" href="pixeldust.css">
-    <link rel="stylesheet" href="horizon.css">
-    <link rel="stylesheet" href="color.css">
-    <link rel="stylesheet" href="bodychest.css">
-    <script src="dust.js"></script>
+    <script>
+        function absorb() {
+            let heart = document.querySelector('.heart');
+            let eabsorb2d = document.createElement('div');
+            eabsorb2d.classList.add('axis');
+            heart.appendChild(eabsorb2d);
+            let left = Math.floor(Math.random() * 560);
+            eabsorb2d.style.left = left + 'px';
+            let top = Math.floor(Math.random() * 560);
+            eabsorb2d.style.top = top + 'px';
+
+            setTimeout(function () {
+                heart.removeChild(eabsorb2d);
+            }, 2000);
+
+            let eabsorb3d = document.createElement('div');
+            eabsorb3d.classList.add('inaxis');
+            eabsorb2d.appendChild(eabsorb3d);
+            let z = Math.floor(Math.random() * 560) - 280;
+            eabsorb3d.style.transform = 'translateZ(' + z + 'px)' + ' ' + 'rotateX(90deg)';
+
+
+            var htmlSnippets = [
+                `
+        <div class="minidust">
+            <div class="horizon">
+                <div class="pixeldust"></div>
+                <div class="pixeldust"></div>
+                <div class="pixeldust"></div>
+                <div class="pixeldust color1"></div>
+                <div class="pixeldust"></div>
+                <div class="pixeldust"></div>
+                <div class="pixeldust"></div>
+                <div class="pixeldust"></div>
+                <div class="pixeldust"></div>
+                <div class="pixeldust"></div>
+            </div>
+            <div class="horizon">
+                <div class="pixeldust"></div>
+                <div class="pixeldust color1"></div>
+                <div class="pixeldust color1"></div>
+                <div class="pixeldust"></div>
+                <div class="pixeldust color1"></div>
+                <div class="pixeldust"></div>
+                <div class="pixeldust"></div>
+                <div class="pixeldust"></div>
+                <div class="pixeldust"></div>
+                <div class="pixeldust"></div>
+            </div>
+            <div class="horizon">
+                <div class="pixeldust"></div>
+                <div class="pixeldust"></div>
+                <div class="pixeldust color1"></div>
+                <div class="pixeldust color1"></div>
+                <div class="pixeldust"></div>
+                <div class="pixeldust color1"></div>
+                <div class="pixeldust color1"></div>
+                <div class="pixeldust"></div>
+                <div class="pixeldust"></div>
+                <div class="pixeldust"></div>
+            </div>
+            <div class="horizon">
+                <div class="pixeldust color1"></div>
+                <div class="pixeldust color1"></div>
+                <div class="pixeldust"></div>
+                <div class="pixeldust color1"></div>
+                <div class="pixeldust color1"></div>
+                <div class="pixeldust"></div>
+                <div class="pixeldust"></div>
+                <div class="pixeldust"></div>
+                <div class="pixeldust"></div>
+                <div class="pixeldust"></div>
+            </div>
+            <div class="horizon">
+                <div class="pixeldust"></div>
+                <div class="pixeldust"></div>
+                <div class="pixeldust color1"></div>
+                <div class="pixeldust color1"></div>
+                <div class="pixeldust color1"></div>
+                <div class="pixeldust color1"></div>
+                <div class="pixeldust"></div>
+                <div class="pixeldust"></div>
+                <div class="pixeldust"></div>
+                <div class="pixeldust"></div>
+            </div>
+            <div class="horizon">
+                <div class="pixeldust"></div>
+                <div class="pixeldust color1"></div>
+                <div class="pixeldust"></div>
+                <div class="pixeldust color1"></div>
+                <div class="pixeldust"></div>
+                <div class="pixeldust color1"></div>
+                <div class="pixeldust"></div>
+                <div class="pixeldust"></div>
+                <div class="pixeldust"></div>
+                <div class="pixeldust"></div>
+            </div>
+            <div class="horizon">
+                <div class="pixeldust"></div>
+                <div class="pixeldust "></div>
+                <div class="pixeldust color1"></div>
+                <div class="pixeldust "></div>
+                <div class="pixeldust"></div>
+                <div class="pixeldust "></div>
+                <div class="pixeldust"></div>
+                <div class="pixeldust"></div>
+                <div class="pixeldust"></div>
+                <div class="pixeldust"></div>
+            </div>
+        </div>
+        `
+                ,
+                `
+<div class="minidust">
+            <div class="horizon">
+                <div class="pixeldust color1"></div>
+                <div class="pixeldust"></div>
+                <div class="pixeldust color1"></div>
+                <div class="pixeldust"></div>
+                <div class="pixeldust"></div>
+                <div class="pixeldust"></div>
+                <div class="pixeldust"></div>
+                <div class="pixeldust"></div>
+                <div class="pixeldust"></div>
+                <div class="pixeldust"></div>
+            </div>
+            <div class="horizon">
+                <div class="pixeldust color1"></div>
+                <div class="pixeldust color1"></div>
+                <div class="pixeldust"></div>
+                <div class="pixeldust"></div>
+                <div class="pixeldust"></div>
+                <div class="pixeldust"></div>
+                <div class="pixeldust"></div>
+                <div class="pixeldust"></div>
+                <div class="pixeldust"></div>
+                <div class="pixeldust"></div>
+            </div>
+            <div class="horizon">
+                <div class="pixeldust"></div>
+                <div class="pixeldust color1"></div>
+                <div class="pixeldust color1"></div>
+                <div class="pixeldust"></div>
+                <div class="pixeldust"></div>
+                <div class="pixeldust"></div>
+                <div class="pixeldust"></div>
+                <div class="pixeldust"></div>
+                <div class="pixeldust"></div>
+                <div class="pixeldust"></div>
+            </div>
+            <div class="horizon">
+                <div class="pixeldust color1"></div>
+                <div class="pixeldust color1"></div>
+                <div class="pixeldust color1"></div>
+                <div class="pixeldust color1"></div>
+                <div class="pixeldust"></div>
+                <div class="pixeldust"></div>
+                <div class="pixeldust"></div>
+                <div class="pixeldust"></div>
+                <div class="pixeldust"></div>
+                <div class="pixeldust"></div>
+            </div>
+            <div class="horizon">
+                <div class="pixeldust"></div>
+                <div class="pixeldust color1"></div>
+                <div class="pixeldust"></div>
+                <div class="pixeldust"></div>
+                <div class="pixeldust"></div>
+                <div class="pixeldust"></div>
+                <div class="pixeldust"></div>
+                <div class="pixeldust"></div>
+                <div class="pixeldust"></div>
+                <div class="pixeldust"></div>
+            </div>
+        </div>
+        `
+                ,
+                `
+        <div class="minidust">
+            <div class="horizon">
+                <div class="pixeldust"></div>
+                <div class="pixeldust"></div>
+                <div class="pixeldust color1"></div>
+                <div class="pixeldust"></div>
+                <div class="pixeldust"></div>
+                <div class="pixeldust"></div>
+                <div class="pixeldust"></div>
+                <div class="pixeldust"></div>
+                <div class="pixeldust"></div>
+                <div class="pixeldust"></div>
+            </div>
+            <div class="horizon">
+                <div class="pixeldust color1"></div>
+                <div class="pixeldust"></div>
+                <div class="pixeldust"></div>
+                <div class="pixeldust"></div>
+                <div class="pixeldust"></div>
+                <div class="pixeldust"></div>
+                <div class="pixeldust"></div>
+                <div class="pixeldust"></div>
+                <div class="pixeldust"></div>
+                <div class="pixeldust"></div>
+            </div>
+            <div class="horizon">
+                <div class="pixeldust"></div>
+                <div class="pixeldust color1"></div>
+                <div class="pixeldust color1"></div>
+                <div class="pixeldust"></div>
+                <div class="pixeldust"></div>
+                <div class="pixeldust"></div>
+                <div class="pixeldust"></div>
+                <div class="pixeldust"></div>
+                <div class="pixeldust"></div>
+                <div class="pixeldust"></div>
+            </div>
+            <div class="horizon">
+                <div class="pixeldust color1"></div>
+                <div class="pixeldust color1"></div>
+                <div class="pixeldust color1"></div>
+                <div class="pixeldust"></div>
+                <div class="pixeldust"></div>
+                <div class="pixeldust"></div>
+                <div class="pixeldust"></div>
+                <div class="pixeldust"></div>
+                <div class="pixeldust"></div>
+                <div class="pixeldust"></div>
+            </div>
+            <div class="horizon">
+                <div class="pixeldust"></div>
+                <div class="pixeldust color1"></div>
+                <div class="pixeldust"></div>
+                <div class="pixeldust"></div>
+                <div class="pixeldust"></div>
+                <div class="pixeldust"></div>
+                <div class="pixeldust"></div>
+                <div class="pixeldust"></div>
+                <div class="pixeldust"></div>
+                <div class="pixeldust"></div>
+            </div>
+        </div>
+        `
+                ,
+                `
+        <div class="minidust">
+            <div class="horizon">
+                <div class="pixeldust color1"></div>
+                <div class="pixeldust"></div>
+                <div class="pixeldust"></div>
+                <div class="pixeldust"></div>
+                <div class="pixeldust"></div>
+                <div class="pixeldust"></div>
+                <div class="pixeldust"></div>
+                <div class="pixeldust"></div>
+                <div class="pixeldust"></div>
+                <div class="pixeldust"></div>
+            </div>
+            <div class="horizon">
+                <div class="pixeldust"></div>
+                <div class="pixeldust color1"></div>
+                <div class="pixeldust color1"></div>
+                <div class="pixeldust"></div>
+                <div class="pixeldust"></div>
+                <div class="pixeldust"></div>
+                <div class="pixeldust"></div>
+                <div class="pixeldust"></div>
+                <div class="pixeldust"></div>
+                <div class="pixeldust"></div>
+            </div>
+            <div class="horizon">
+                <div class="pixeldust"></div>
+                <div class="pixeldust"></div>
+                <div class="pixeldust"></div>
+                <div class="pixeldust"></div>
+                <div class="pixeldust"></div>
+                <div class="pixeldust"></div>
+                <div class="pixeldust"></div>
+                <div class="pixeldust"></div>
+                <div class="pixeldust"></div>
+                <div class="pixeldust"></div>
+            </div>
+            <div class="horizon">
+                <div class="pixeldust"></div>
+                <div class="pixeldust color1"></div>
+                <div class="pixeldust"></div>
+                <div class="pixeldust"></div>
+                <div class="pixeldust"></div>
+                <div class="pixeldust"></div>
+                <div class="pixeldust"></div>
+                <div class="pixeldust"></div>
+                <div class="pixeldust"></div>
+                <div class="pixeldust"></div>
+            </div>
+        </div>
+        `
+                ,
+                `
+        <div class="pixeldust color1"></div>
+        `
+            ]
+
+            function getRandomHtml() {
+                var randomIndex = Math.floor(Math.random() * htmlSnippets.length);
+                return htmlSnippets[randomIndex];
+            }
+            eabsorb3d.innerHTML = getRandomHtml();
+        }
+
+        setInterval(function () {
+            absorb()
+        }, 50);
+    </script>
     <style>
+        /*body chest*/
+        .bodychest {
+            position: relative;
+            transform-style: preserve-3d;
+            top: 0;
+            width: 140px;
+            height: 140px;
+        }
+
+        .downbodychest,
+        .topbodychest,
+        .frontbodychest,
+        .endereye,
+        .backbodychest,
+        .leftbodychest,
+        .rightbodychest {
+            position: absolute;
+        }
+
+        .downbodychest {
+            z-index: 1;
+            top: 0;
+        }
+
+        .topbodychest {
+            top: 0;
+            transform: translateZ(100px);
+            animation: shadelid 5s infinite linear;
+        }
+
+        .backbodychest {
+            position: relative;
+            top: -100px;
+            z-index: 3;
+            transform-origin: bottom;
+            transform: rotateX(-90deg);
+        }
+
+        .leftbodychest {
+            z-index: 2;
+            rotate: -90deg;
+            transform-origin: bottom;
+            top: -30px;
+            left: -70px;
+            transform: rotateX(-90deg);
+        }
+
+        .rightbodychest {
+            z-index: 2;
+            top: -30px;
+            right: -70px;
+            transform-origin: bottom;
+            rotate: 90deg;
+            transform: rotateX(-90deg);
+        }
+
+        .frontbodychest {
+            bottom: 0;
+            z-index: 2;
+            transform-origin: bottom;
+            transform: rotateX(-90deg);
+        }
+
+        .endereye {
+            position: absolute;
+            top: 10px;
+            left: 50%;
+            width: 80px;
+            height: 80px;
+            transform: translate(-50%);
+        }
+
+        /*color*/
+        .color1 {
+            background-color: #B837BB;
+        }
+
+        /*lid*/
+        .color2 {
+            background-color: #1F272C;
+        }
+
+        .color3 {
+            background-color: #222E30;
+        }
+
+        .color4 {
+            background-color: #2A393C;
+        }
+
+        .color5 {
+            background-color: #586E62;
+        }
+
+        .color6 {
+            background-color: #3F524D;
+        }
+
+        .color7 {
+            background-color: #2F3E42;
+        }
+
+        .color8 {
+            background-color: #324348;
+        }
+
+        .color9 {
+            background-color: #36494B;
+        }
+
+        .color10 {
+            background-color: #020B10;
+        }
+
+        /*body chest*/
+        .color11 {
+            background-color: #07161B;
+        }
+
+        .color12 {
+            background-color: #667E6E;
+        }
+
+        .color13 {
+            background-color: #3E6B60;
+        }
+
+        .color14 {
+            background-color: #2C4A3D;
+        }
+
+        .color15 {
+            background-color: #17232A;
+        }
+
+        .color16 {
+            background-color: #05151C;
+        }
+
+        .color17 {
+            background-color: #132223;
+        }
+
+        .color18 {
+            background-color: #072223;
+        }
+
+        .color19 {
+            background-color: #132819;
+        }
+
+        .color20 {
+            background-color: #A6CEB6;
+        }
+
+        .color21 {
+            background-color: #5F9658;
+        }
+
+        .color22 {
+            background-color: #507F57;
+        }
+
+        /*horizon*/
+        .horizon {
+            width: fit-content;
+            height: 2px;
+            display: flex;
+        }
+
+        .horizon2 {
+            width: fit-content;
+            height: 10px;
+            display: flex;
+        }
+
+        /*pixel dust*/
+        .pixeldust {
+            width: 2px;
+            height: 2px;
+        }
+
+        /*minidust*/
+        .minidust {
+            width: 20px;
+            height: 20px;
+        }
+
+        /*body*/
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            min-height: 100vh;
+            display: flex;
+            transform-style: preserve-3d;
+            perspective: 1000px;
+            justify-content: center;
+            align-items: center;
+            background-color: #131313;
+        }
+
+        .container {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            transform-style: preserve-3d;
+            perspective: 1000px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .shadebottom {
+            bottom: 0;
+        }
+
+        .shadez0 {
+            z-index: -1;
+        }
+
+        .shadez1 {
+            z-index: 1;
+        }
+
+        .shade2 {
+            position: absolute;
+            width: 140px;
+            height: 20px;
+            background-color: rgba(0, 0, 0, 0.200);
+        }
+
+        .shade3 {
+            position: absolute;
+            width: 140px;
+            height: 30px;
+            background-color: rgba(0, 0, 0, 0.200);
+        }
+
+        .shadeliddown {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 100px;
+            height: 100px;
+            transform: translate(-50%, -50%);
+            background-color: rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+
+        .shade140140 {
+            position: absolute;
+            top: 0;
+            width: 140px;
+            height: 140px;
+            background-color: rgba(0, 0, 0, 0.2);
+            z-index: -1;
+        }
+
+        .shade140100 {
+            position: absolute;
+            top: 0;
+            width: 140px;
+            height: 100px;
+            background-color: rgba(0, 0, 0, 0.2);
+        }
+
+        .shade14050 {
+            position: absolute;
+            top: 0;
+            width: 140px;
+            height: 50px;
+            background-color: rgba(0, 0, 0, 0.2);
+        }
+
+        @keyframes rotate {
+            0% {
+                transform: rotateX(65deg) rotateZ(35deg);
+            }
+
+            100% {
+                transform: rotateX(65deg) rotateZ(305deg);
+            }
+        }
+
+        /*dust*/
+        .heart {
+            position: relative;
+            position: absolute;
+            width: 560px;
+            height: 560px;
+            border: 1px solid white;
+            transform-style: preserve-3d;
+        }
+
+        .axis {
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            transform-style: preserve-3d;
+            animation: axisabsorb 2s linear;
+        }
+
+        .inaxis {
+            width: 20px;
+            height: 20px;
+            animation: inaxisabsorb 2s linear;
+        }
+
+        @keyframes axisabsorb {
+            0% {
+                transform: translate(-50%, -50%);
+            }
+
+            100% {
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+        }
+
+        @keyframes inaxisabsorb {
+            0% {}
+
+            100% {
+                transform: rotateX(90deg) translateZ(0px);
+            }
+        }
+
+        /*ender chest*/
+        .enderchest {
+            position: relative;
+            transform-style: preserve-3d;
+            width: 140px;
+            height: 140px;
+            animation: rotate 40s infinite linear;
+        }
+
+        @keyframes rotate {
+            0% {
+                transform: rotateX(45deg) rotateZ(45deg);
+            }
+
+            100% {
+                transform: rotateX(45deg) rotateZ(45deg);
+            }
+        }
+
+        /*lid*/
+        .lid {
+            position: relative;
+            position: absolute;
+            top: 0;
+            transform-style: preserve-3d;
+            width: 140px;
+            height: 140px;
+            transform-origin: top;
+            animation: lidanimate 5s infinite linear;
+        }
+
+        .liddown,
+        .lidup,
+        .lidleft,
+        .lidright,
+        .lidfront,
+        .lidback {
+            position: absolute;
+        }
+
+        .liddown {
+            top: 0;
+            z-index: 1;
+            animation: shadelid 5s infinite linear;
+        }
+
+        .lidup {
+            top: 0;
+            transform: translateZ(50px);
+        }
+
+        .lidleft {
+            position: relative;
+            top: 20px;
+            left: -70px;
+            transform-origin: bottom;
+            rotate: 90deg;
+            transform: rotateX(-90deg);
+        }
+
+        .lidright {
+            top: 20px;
+            right: -70px;
+            transform-origin: bottom;
+            z-index: 1;
+            rotate: -90deg;
+            transform: rotateX(-90deg);
+
+        }
+
+        .lidfront {
+            bottom: 0px;
+            z-index: 1;
+            transform-origin: bottom;
+            transform: rotateX(-90deg);
+        }
+
+        .lidback {
+            top: -50px;
+            transform-origin: bottom;
+            transform: rotateX(-90deg);
+        }
+
+        @keyframes lidanimate {
+            0% {
+                transform: translateZ(90px) rotateX(0deg);
+            }
+
+            25% {
+                transform: translateZ(90px) rotateX(90deg);
+            }
+
+            50% {
+                transform: translateZ(90px) rotateX(90deg);
+            }
+
+            75% {
+                transform: translateZ(90px) rotateX(0deg);
+            }
+
+            100% {
+                transform: translateZ(90px) rotateX(0deg);
+            }
+        }
+
+        @keyframes shadelid {
+            0% {
+                filter: brightness(0);
+            }
+
+            25% {
+                filter: brightness(1);
+            }
+
+            50% {
+                filter: brightness(1);
+            }
+
+            75% {
+                filter: brightness(0);
+            }
+
+            100% {
+                filter: brightness(0);
+            }
+        }
+
         /*pixel*/
         .pixel {
             width: 10px;
             height: 10px;
         }
+
+        /*block*/
+        .block2 {
+            position: absolute;
+            transform-style: preserve-3d;
+            display: flex;
+        }
+
+        .block {
+            position: relative;
+            transform-style: preserve-3d;
+            width: 10px;
+            height: 10px;
+        }
+
+        .blocktop,
+        .blockdown,
+        .blockback,
+        .blockfront,
+        .blockleft,
+        .blockright {
+            position: absolute;
+        }
+
+        .blockfront {
+            transform: translateZ(10px);
+        }
+
+        .blocktop {
+            top: -10px;
+            transform-origin: bottom;
+            transform: rotateX(-90deg);
+        }
+
+        .blockdown {
+            bottom: -10px;
+            transform-origin: top;
+            transform: rotateX(90deg);
+        }
+
+        .blockleft {
+            left: -10px;
+            transform-origin: right;
+            transform: rotateY(90deg);
+        }
+
+        .blockright {
+            right: -10px;
+            transform-origin: left;
+            transform: rotateY(-90deg);
+        }
+
         /*lock*/
         .lock {
             position: relative;
@@ -32,42 +841,55 @@
             height: 10px;
             transform: translateZ(-10px);
         }
+
         .row1 {
             position: absolute;
         }
+
         .row2 {
             transform: translateZ(10px);
         }
+
         .row3 {
             transform: translateZ(20px);
         }
+
         .row4 {
             transform: translateZ(30px);
         }
+
         .color1-1 {
             background-color: #947626;
         }
+
         .color2-1 {
             background-color: #9A7D24;
         }
+
         .color3-1 {
             background-color: #947626;
         }
+
         .color4-1 {
             background-color: #B4A445;
         }
+
         .color5-1 {
             background-color: #A89623;
         }
+
         .color6-1 {
             background-color: #BCAF61;
         }
+
         .color7-1 {
             background-color: #BBA83A;
         }
+
         .color8-1 {
             background-color: #CBC394;
         }
+
         .part11 {
             position: absolute;
             width: 40px;
